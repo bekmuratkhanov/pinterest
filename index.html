@@ -1,298 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pinterest</title>
-  <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinterest</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
-    background-color: #fff;
+    background-color: #fff;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 16px;
-    border-bottom: 1px solid #efefef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    border-bottom: 1px solid #efefef;
 }
 
 .header-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e60023;
-    text-decoration: none;
-    background-color: #efefef;
-    padding: 5px 10px;
-    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e60023;
+    text-decoration: none;
+    background-color: #efefef;
+    padding: 5px 10px;
+    border-radius: 50%;
 }
 
 .search-bar {
-    flex-grow: 1;
-    max-width: 800px;
-    min-width: 400px;
+    flex-grow: 1;
+    max-width: 800px;
+    min-width: 400px;
 }
 
 .search-bar input {
-    width: 100%;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 25px;
-    background-color: #efefef;
-    font-size: 16px;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #efefef;
+    font-size: 16px;
 }
 
 .nav-icons a {
-    text-decoration: none;
-    color: #111;
-    font-size: 20px;
-    padding: 8px;
-    margin-left: 5px;
-    border-radius: 50%;
-    background-color: #efefef;
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+    padding: 8px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: #efefef;
 }
 
 .header-right {
-    display: flex;
-    align-items: center;
+    display: flex;
+    align-items: center;
 }
 
-/* Стилизация навигационного блока (теперь div) */
 .categories {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    gap: 15px;
-    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 15px;
+    overflow-x: auto;
 }
 
 .categories a {
-    text-decoration: none;
-    color: #111;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-weight: 500;
-    transition: background-color 0.2s;
-    white-space: nowrap;
+    text-decoration: none;
+    color: #111;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    white-space: nowrap;
 }
 
 .categories a:hover {
-    background-color: #eee;
+    background-color: #eee;
 }
 
 .categories .active {
-    background-color: #111;
-    color: #fff;
+    background-color: #111;
+    color: #fff;
 }
 
 .main-content-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-    padding: 10px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .pin-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .pin {
-    width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    cursor: zoom-in;
-    position: relative;
-    transition: transform 0.3s ease;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: zoom-in;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
 .pin img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
-   </style>
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinterest Clone</title>
-    <link rel="stylesheet" href="styles.css">
+   </style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="header-left">
-            <a href="#" class="logo">P</a>
-            <div class="search-bar">
-                <input type="text" placeholder="Поиск">
-            </div>
-        </div>
-        <div class="header-right">
-            <div class="nav-icons">
-                <a href="#">🔔</a>
-                <a href="#">💬</a>
-                <a href="#">👤</a>
-                <a href="#">🔽</a>
-            </div>
-        </div>
-    </header>
+    <header class="header">
+        <div class="header-left">
+            <a href="#" class="logo">P</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск">
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="nav-icons">
+                <a href="#">🔔</a>
+                <a href="#">💬</a>
+                <a href="#">👤</a>
+                <a href="#">🔽</a>
+            </div>
+        </div>
+    </header>
 
-    <div class="page-navigation categories">
-        <a href="#" class="active">Все</a>
-        <a href="#">Classy</a>
-        <a href="#">Photoshop</a>
-        <a href="#">Shopping ideas</a>
-        <a href="#">masterpiece of engineering</a>
-        <a href="#">Design</a>
-    </div>
+    <div class="page-navigation categories">
+        <a href="#" class="active">Все</a>
+        <a href="#">Classy</a>
+        <a href="#">Photoshop</a>
+        <a href="#">Shopping ideas</a>
+        <a href="#">masterpiece of engineering</a>
+        <a href="#">Design</a>
+    </div>
 
-    <div class="main-content-grid">
-        <div class="pin-column">
-            <div class="pin">
-                <img src="path/to/image1.jpg" alt="Stylish Man">
-            </div>
-            <div class="pin">
-                <img src="path/to/image5.jpg" alt="Green Mustang">
-            </div>
-           <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R4"></div>
-            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C5 R5"></div>
-            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R6"></div>
-            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C5 R7"></div>
-            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C5 R8"></div>
-            <div class="pin"><img src="Tuning de antigamente_ os estilos e acessórios automotivos que marcaram época nos anos 1970 e 1980 _ FlatOut!.jpg" alt="Pin C5 R9"></div>
-            <div class="pin"><img src="загрузка.jpg" alt="Pin C5 R10"></div>
-            <div class="pin"><img src="Brad pitt.jpg" alt="Pin C5 R11"></div>
-            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C5 R12"></div>
-            <div class="pin"><img src="By_ @secret_studiobkk __Shop similar products_ https___depop_com_retrysupply ⬅️__#SecondhandFinds #RetroCloset #EcoChicStyle #TimelessThreads #VintageVibes #CuratedCloset #StyleSustainably #RetroRewind #WardrobeGoa.jpg" alt="Pin C5 R13"></div>
-        </div>
+    <div class="main-content-grid">
+        <div class="pin-column">
+            <div class="pin">
+                <img src="path/to/image1.jpg" alt="Stylish Man">
+            </div>
+            <div class="pin">
+                <img src="path/to/image5.jpg" alt="Green Mustang">
+            </div>
+           <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R4"></div>
+            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C5 R5"></div>
+            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R6"></div>
+            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C5 R7"></div>
+            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C5 R8"></div>
+            <div class="pin"><img src="Tuning de antigamente_ os estilos e acessórios automotivos que marcaram época nos anos 1970 e 1980 _ FlatOut!.jpg" alt="Pin C5 R9"></div>
+            <div class="pin"><img src="загрузка.jpg" alt="Pin C5 R10"></div>
+            <div class="pin"><img src="Brad pitt.jpg" alt="Pin C5 R11"></div>
+            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C5 R12"></div>
+            <div class="pin"><img src="By_ @secret_studiobkk __Shop similar products_ https___depop_com_retrysupply ⬅️__#SecondhandFinds #RetroCloset #EcoChicStyle #TimelessThreads #VintageVibes #CuratedCloset #StyleSustainably #RetroRewind #WardrobeGoa.jpg" alt="Pin C5 R13"></div>
+        </div>
 
-        <div class="pin-column">
-            <div class="pin">
-                <img src="path/to/image2.jpg" alt="Hellcat Crown Vic Top">
-            </div>
-            <div class="pin">
-                <img src="path/to/image6.jpg" alt="Hellcat Crown Vic Engine">
-            </div>
-            <div class="pin">
-                <img src="path/to/image9.jpg" alt="Carhartt T-Shirt">
-            </div>
-           <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R4"></div>
-            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C5 R5"></div>
-            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R6"></div>
-            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C5 R7"></div>
-            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C5 R8"></div>
-            <div class="pin"><img src="Tuning de antigamente_ os estilos e acessórios automotivos que marcaram época nos anos 1970 e 1980 _ FlatOut!.jpg" alt="Pin C5 R9"></div>
-            <div class="pin"><img src="загрузка.jpg" alt="Pin C5 R10"></div>
-            <div class="pin"><img src="Brad pitt.jpg" alt="Pin C5 R11"></div>
-            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C5 R12"></div>
-            <div class="pin"><img src="By_ @secret_studiobkk __Shop similar products_ https___depop_com_retrysupply ⬅️__#SecondhandFinds #RetroCloset #EcoChicStyle #TimelessThreads #VintageVibes #CuratedCloset #StyleSustainably #RetroRewind #WardrobeGoa.jpg" alt="Pin C5 R13"></div>
-        </div>
+        <div class="pin-column">
+            <div class="pin">
+                <img src="path/to/image2.jpg" alt="Hellcat Crown Vic Top">
+            </div>
+            <div class="pin">
+                <img src="path/to/image6.jpg" alt="Hellcat Crown Vic Engine">
+            </div>
+            <div class="pin">
+                <img src="path/to/image9.jpg" alt="Carhartt T-Shirt">
+            </div>
+           <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R4"></div>
+            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C5 R5"></div>
+            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R6"></div>
+            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C5 R7"></div>
+            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C5 R8"></div>
+            <div class="pin"><img src="Tuning de antigamente_ os estilos и аксессуары automotivos que marcaram época nos anos 1970 and 1980 _ FlatOut!.jpg" alt="Pin C5 R9"></div>
+            <div class="pin"><img src="загрузка.jpg" alt="Pin C5 R10"></div>
+            <div class="pin"><img src="Brad pitt.jpg" alt="Pin C5 R11"></div>
+            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C5 R12"></div>
+            <div class="pin"><img src="By_ @secret_studiobkk __Shop similar products_ https___depop_com_retrysupply ⬅️__#SecondhandFinds #RetroCloset #EcoChicStyle #TimelessThreads #VintageVibes #CuratedCloset #StyleSustainably #RetroRewind #WardrobeGoa.jpg" alt="Pin C5 R13"></div>
+        </div>
 
-        <div class="pin-column">
-            <div class="pin">
-                <img src="iPhone 16 черный.jpg" alt="Man's Legs and Shoes">
-            </div>
-            <div class="pin">
-                <img src="Jules Koundé FcBarcelona Poster.jpg" alt="Red Watch">
-            </div>
-           <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R4"></div>
-            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C5 R5"></div>
-            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R6"></div>
-            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C5 R7"></div>
-            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C5 R8"></div>
-            <div class="pin"><img src="Tuning de antigamente_ os estilos e acessórios automotivos que marcaram época nos anos 1970 e 1980 _ FlatOut!.jpg" alt="Pin C5 R9"></div>
-            <div class="pin"><img src="загрузка.jpg" alt="Pin C5 R10"></div>
-            <div class="pin"><img src="Brad pitt.jpg" alt="Pin C5 R11"></div>
-            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C5 R12"></div>
-            <div class="pin"><img src="By_ @secret_studiobkk __Shop similar products_ https___depop_com_retrysupply ⬅️__#SecondhandFinds #RetroCloset #EcoChicStyle #TimelessThreads #VintageVibes #CuratedCloset #StyleSustainably #RetroRewind #WardrobeGoa.jpg" alt="Pin C5 R13"></div>
-        </div>
+        <div class="pin-column">
+            <div class="pin">
+                <img src="iPhone 16 черный.jpg" alt="Man's Legs and Shoes">
+            </div>
+            <div class="pin">
+                <img src="Jules Koundé FcBarcelona Poster.jpg" alt="Red Watch">
+            </div>
+           <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R4"></div>
+            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C5 R5"></div>
+            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R6"></div>
+            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C5 R7"></div>
+            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C5 R8"></div>
+            <div class="pin"><img src="Tuning de antigamente_ os estilos и аксессуары automotivos que marcarли época nos anos 1970 and 1980 _ FlatOut!.jpg" alt="Pin C5 R9"></div>
+            <div class="pin"><img src="загрузка.jpg" alt="Pin C5 R10"></div>
+            <div class="pin"><img src="Brad pitt.jpg" alt="Pin C5 R11"></div>
+            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C5 R12"></div>
+            <div class="pin"><img src="By_ @secret_studiobkk __Shop similar products_ https___depop_com_retrysupply ⬅️__#SecondhandFinds #RetroCloset #EcoChicStyle #TimelessThreads #VintageVibes #CuratedCloset #StyleSustainably #RetroRewind #WardrobeGoa.jpg" alt="Pin C5 R13"></div>
+        </div>
 
-        <div class="pin-column">
-            <div class="pin">
-                <img src="image-hero-desktop.png" alt="Passport Photo and Kiss">
-            </div>
-            <div class="pin">
-                <img src="iPhone 16 черный.jpg" alt="Runners Barefoot Caveman">
-            </div>
-            <div class="pin">
-                <img src="3b742dbc-821a-40fa-90b1-1427c7efe5e3.jpg" alt="Black Pants">
-            </div>
-            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R4"></div>
-            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C5 R5"></div>
-            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R6"></div>
-            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C5 R7"></div>
-            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C5 R8"></div>
-            <div class="pin"><img src="Tuning de antigamente_ os estilos e acessórios automotivos que marcaram época nos anos 1970 e 1980 _ FlatOut!.jpg" alt="Pin C5 R9"></div>
-            <div class="pin"><img src="загрузка.jpg" alt="Pin C5 R10"></div>
-            <div class="pin"><img src="Brad pitt.jpg" alt="Pin C5 R11"></div>
-            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C5 R12"></div>
-            <div class="pin"><img src="By_ @secret_studiobkk __Shop similar products_ https___depop_com_retrysupply ⬅️__#SecondhandFinds #RetroCloset #EcoChicStyle #TimelessThreads #VintageVibes #CuratedCloset #StyleSustainably #RetroRewind #WardrobeGoa.jpg" alt="Pin C5 R13"></div>
-        </div>
+        <div class="pin-column">
+            <div class="pin">
+                <img src="image-hero-desktop.png" alt="Passport Photo and Kiss">
+            </div>
+            <div class="pin">
+                <img src="iPhone 16 черный.jpg" alt="Runners Barefoot Caveman">
+            </div>
+            <div class="pin">
+                <img src="3b742dbc-821a-40fa-90b1-1427c7efe5e3.jpg" alt="Black Pants">
+            </div>
+            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R4"></div>
+            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C5 R5"></div>
+            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R6"></div>
+            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C5 R7"></div>
+            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C5 R8"></div>
+            <div class="pin"><img src="Tuning de antigamente_ os estilos и аксессуары automotivos que marcarли época nos anos 1970 and 1980 _ FlatOut!.jpg" alt="Pin C5 R9"></div>
+            <div class="pin"><img src="загрузка.jpg" alt="Pin C5 R10"></div>
+            <div class="pin"><img src="Brad pitt.jpg" alt="Pin C5 R11"></div>
+            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C5 R12"></div>
+            <div class="pin"><img src="By_ @secret_studiobkk __Shop similar products_ https___depop_com_retrysupply ⬅️__#SecondhandFinds #RetroCloset #EcoChicStyle #TimelessThreads #VintageVibes #CuratedCloset #StyleSustainably #RetroRewind #WardrobeGoa.jpg" alt="Pin C5 R13"></div>
+        </div>
 
-        <div class="pin-column">
-            <div class="pin">
-                <img src="image-hero-desktop.png" alt="Passport Photo and Kiss">
-            </div>
-            <div class="pin">
-                <img src="iPhone 16 черный.jpg" alt="Runners Barefoot Caveman">
-            </div>
-            <div class="pin">
-                <img src="3b742dbc-821a-40fa-90b1-1427c7efe5e3.jpg" alt="Black Pants">
-            </div>
-            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R4"></div>
-            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C5 R5"></div>
-            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R6"></div>
-            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C5 R7"></div>
-            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C5 R8"></div>
-            <div class="pin"><img src="Tuning de antigamente_ os estilos e acessórios automotivos que marcaram época nos anos 1970 e 1980 _ FlatOut!.jpg" alt="Pin C5 R9"></div>
-            <div class="pin"><img src="загрузка.jpg" alt="Pin C5 R10"></div>
-            <div class="pin"><img src="Brad pitt.jpg" alt="Pin C5 R11"></div>
-            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C5 R12"></div>
-            <div class="pin"><img src="By_ @secret_studiobkk __Shop similar products_ https___depop_com_retrysupply ⬅️__#SecondhandFinds #RetroCloset #EcoChicStyle #TimelessThreads #VintageVibes #CuratedCloset #StyleSustainably #RetroRewind #WardrobeGoa.jpg" alt="Pin C5 R13"></div>
-        </div>
+        <div class="pin-column">
+            <div class="pin">
+                <img src="image-hero-desktop.png" alt="Passport Photo and Kiss">
+            </div>
+            <div class="pin">
+                <img src="iPhone 16 черный.jpg" alt="Runners Barefoot Caveman">
+            </div>
+            <div class="pin">
+                <img src="3b742dbc-821a-40fa-90b1-1427c7efe5e3.jpg" alt="Black Pants">
+            </div>
+            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R4"></div>
+            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C5 R5"></div>
+            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C5 R6"></div>
+            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C5 R7"></div>
+            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C5 R8"></div>
+            <div class="pin"><img src="Tuning de antigamente_ os estilos и аксессуары automotivos que marcarли época nos anos 1970 and 1980 _ FlatOut!.jpg" alt="Pin C5 R9"></div>
+            <div class="pin"><img src="загрузка.jpg" alt="Pin C5 R10"></div>
+            <div class="pin"><img src="Brad pitt.jpg" alt="Pin C5 R11"></div>
+            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C5 R12"></div>
+            <div class="pin"><img src="By_ @secret_studiobkk __Shop similar products_ https___depop_com_retrysupply ⬅️__#SecondhandFinds #RetroCloset #EcoChicStyle #TimelessThreads #VintageVibes #CuratedCloset #StyleSustainably #RetroRewind #WardrobeGoa.jpg" alt="Pin C5 R13"></div>
+        </div>
 
 
-        <div class="pin-column">
-            <div class="pin">
-                <img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Anime Art 2015 2017">
-            </div>
-            <div class="pin">
-                <img src="3b742dbc-821a-40fa-90b1-1427c7efe5e3.jpg" alt="Black Panther Art">
-            </div>
-            <div class="pin"><img src="Jamal Musiala Germany Euro 2024.jpg" alt="Pin C6 R3"></div>
-            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C6 R4"></div>
-            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C6 R5"></div>
-            <div class="pin"><img src="загрузка (4).jpg" alt="Pin C6 R6"></div>
-            <div class="pin"><img src="iPhone 16 черный.jpg" alt="Pin C6 R7"></div>
-            <div class="pin"><img src="da2b7395-a990-47eb-967c-c00b0ef2ed9b.jpg" alt="Pin C6 R8"></div>
-            <div class="pin"><img src="3b742dbc-821a-40fa-90b1-1427c7efe5e3.jpg" alt="Pin C6 R9"></div>
-            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C6 R10"></div>
-            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C6 R11"></div>
-            <div class="pin"><img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Pin C6 R12"></div>
-        </div>
-    </div>
-
-</body>
-</html>
-</body>
+        <div class="pin-column">
+            <div class="pin">
+                <img src="f2e0c4d6-b713-4c52-8058-978d2bdf8bea.jpg" alt="Anime Art 2015 2017">
+            </div>
+            <div class="pin">
+                <img src="3b742dbc-821a-40fa-90b1-1427c7efe5e3.jpg" alt="Black Panther Art">
+            </div>
+            <div class="pin"><img src="Jamal Musiala Germany Euro 2024.jpg" alt="Pin C6 R3"></div>
+            <div class="pin"><img src="Lamine Yamal Euro 2024 - Ryan Biantoro.jpg" alt="Pin C6 R4"></div>
+            <div class="pin"><img src="Ronaldo Banner.jpg" alt="Pin C6 R5"></div>
+            <div class="pin"><img src="загрузка (4).jpg" alt="Pin C6 R6"></div>
+            <div class="pin"><img src="iPhone 16 черный.jpg" alt="Pin C6 R7"></div>
+            <div class="pin"><img src="da2b7395-a990-47eb-967c-c00b0ef2ed9b.jpg" alt="Pin C6 R8"></div>
+            <div class="pin"><img src="3b742dbc-821a-40fa-90b1-1427c7efe5e3.jpg" alt="Pin C6 R9"></div>
+            <div class="pin"><img src="474da373-dd1b-40dc-8e26-caac3a508525.jpg" alt="Pin C6 R10"></div>
+            <div class="pin"><img src="e18e0dfe-37c2-40c0-8810-d6a3ee48021e.jpg" alt="Pin C6 R11"></div>
+            <div class="pin"><img src="f2e0c4d6-b713-4c52-805
